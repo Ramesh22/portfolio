@@ -38,7 +38,7 @@
 	loader();
 
 	// Scrollax
-   $.Scrollax();
+   //$.Scrollax();
 
 
 
