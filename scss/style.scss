@@ -27,6 +27,14 @@ $secondary: #a0f669;
     transition:         all $transition ease;
 }
 
+html, body {
+	// Ensure scrolling is enabled
+	overflow-x: hidden; // Prevent horizontal scrolling
+	overflow-y: auto; // Ensure vertical scrolling
+	height: auto; // Remove any height restrictions
+	-webkit-overflow-scrolling: touch; // Enable smooth scrolling on iOS
+}
+
 html {
 	// overflow-x: hidden;
 }
@@ -39,10 +47,9 @@ body {
 	color: lighten($black,60%);
 	&.menu-show {
 		overflow: hidden;
-		//position: fixed;
+		position: relative;
 		//height: 100%;
 		//width: 100%;
-		touch-action: none;
 	}
 }
 a {
@@ -368,7 +375,7 @@ h1, h2, h3, h4, h5,
 	}
 	.owl-dots {
 		text-align: center;
-		.owl-dot {
+		owl-dot {
 			width: 10px;
 			height: 10px;
 			margin: 5px;
