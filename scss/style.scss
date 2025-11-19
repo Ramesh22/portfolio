@@ -28,16 +28,13 @@ $secondary: #a0f669;
 }
 
 html, body {
-	// Ensure scrolling is enabled
+	// Ensure scrolling is explicitly enabled
 	overflow-x: hidden; // Prevent horizontal scrolling
-	overflow-y: auto; // Ensure vertical scrolling
-	height: auto; // Remove any height restrictions
+	overflow-y: scroll; // Force vertical scrolling
+	height: 100%; // Ensure full height for scrolling
 	-webkit-overflow-scrolling: touch; // Enable smooth scrolling on iOS
 }
 
-html {
-	// overflow-x: hidden;
-}
 body {
 	font-family: $font-primary;
 	background: $black;
@@ -46,10 +43,9 @@ body {
 	font-weight: 400;
 	color: lighten($black,60%);
 	&.menu-show {
-		overflow: hidden;
-		position: relative;
-		//height: 100%;
-		//width: 100%;
+		overflow: hidden; // Prevent scrolling when menu is open
+		position: relative; // Ensure no fixed positioning interferes
+		height: auto; // Allow scrolling height
 	}
 }
 a {
